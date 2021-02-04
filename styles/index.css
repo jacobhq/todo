@@ -24,6 +24,15 @@
     width: 1rem !important;
     height: 1rem !important;
     margin: 0 !important;
+    border: 2px solid #e2e8f0 !important;
+}
+
+.complete:hover:not(.complete:checked) {
+    border: 2px solid #a0aec0 !important;
+}
+
+.complete:checked {
+    border: 0 !important;
 }
 
 /* Start purging... */
