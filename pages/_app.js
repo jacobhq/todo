@@ -4,7 +4,7 @@ import '../styles/index.css'
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <main className={'dark'}>
+    <main className={'light'}>
       <Auth.UserContextProvider supabaseClient={supabase}>
         <Component {...pageProps} />
       </Auth.UserContextProvider>
