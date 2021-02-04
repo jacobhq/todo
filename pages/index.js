@@ -11,7 +11,8 @@ export default function IndexPage() {
         <div className="w-full h-full flex justify-center items-center p-4">
           <Auth
             supabaseClient={supabase}
-            providers={['google', 'github']}
+            providers={['github']}
+            view={authView}
             socialLayout="horizontal"
             socialButtonSize="xlarge"
           />
