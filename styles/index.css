@@ -20,6 +20,12 @@
   @apply transition duration-150 bg-black text-white;
 }
 
+.complete {
+    width: 1rem !important;
+    height: 1rem !important;
+    margin: 0 !important;
+}
+
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */

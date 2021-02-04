@@ -97,9 +97,9 @@ const Todo = ({ todo, onDelete }) => {
         <div className="min-w-0 flex-1 flex items-center">
           <div className="text-sm leading-5 font-medium truncate">{todo.task}</div>
         </div>
-        <div>
+        <div className="">
           <input
-            className="cursor-pointer"
+            className="cursor-pointer sbui-checkbox complete"
             onChange={(e) => toggle()}
             type="checkbox"
             checked={isCompleted ? true : ''}
@@ -111,7 +111,7 @@ const Todo = ({ todo, onDelete }) => {
             e.stopPropagation()
             onDelete()
           }}
-          className="w-4 h-4 ml-2 border-2 hover:border-black rounded"
+          className="w-4 h-4 ml-2 border-2 hover:border-gray-500 rounded"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="gray">
             <path
