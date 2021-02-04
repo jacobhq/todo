@@ -4,8 +4,10 @@ import '../styles/index.css'
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <Auth.UserContextProvider supabaseClient={supabase}>
-      <Component {...pageProps} />
-    </Auth.UserContextProvider>
+    <main className={'dark'}>
+      <Auth.UserContextProvider supabaseClient={supabase}>
+        <Component {...pageProps} />
+      </Auth.UserContextProvider>
+    </main>
   )
 }
