@@ -43,6 +43,32 @@
     border: 0 !important;
 }
 
+.sbui-input.sbui-input--with-icon {
+    background-color: #0b3954;
+    border-color: #20fc8f;
+    color: #20fc8f;
+}
+
+.sbui-input.sbui-input--with-icon:focus {
+    border-color: #20fc8f;
+}
+
+.sbui-formlayout__label, .sbui-checkbox__label-container__label__span {
+    color: #BBBBBB !important;
+}
+
+.sbui-btn.sbui-btn-primary.sbui-btn--w-full.sbui-btn-container--shadow.sbui-btn--large {
+    @apply border border-fgreen bg-dblue text-fgreen font-bold py-2 px-4 rounded text-center;
+}
+
+.sbui-btn.sbui-btn-primary.sbui-btn--w-full.sbui-btn-container--shadow.sbui-btn--large:focus, .sbui-btn.sbui-btn-primary.sbui-btn--w-full.sbui-btn-container--shadow.sbui-btn--large:hover {
+    @apply transition duration-150 bg-fgreen text-dblue;
+}
+
+.sbui-btn.sbui-btn-default.sbui-btn--w-full.sbui-btn-container--shadow.sbui-btn--xlarge {
+    @apply transition duration-150 bg-fgreen text-dblue border-0;
+}
+
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
