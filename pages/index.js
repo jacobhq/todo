@@ -1,38 +1,15 @@
-import { supabase } from '../lib/initSupabase'
-import { Auth } from '@supabase/ui'
-import TodoList from '../components/TodoList'
+import Link from 'next/link'
 
 export default function IndexPage() {
-  const { user } = Auth.useUser()
-
   return (
-    <div className="w-full h-full bg-dblue">
-      {!user ? (
-        <div className="w-full h-full flex justify-center items-center p-4">
-          <Auth
-            supabaseClient={supabase}
-            providers={['github']}
-            socialLayout="horizontal"
-            socialButtonSize="xlarge"
-          />
-        </div>
-      ) : (
-        <div
-          className="w-full h-full flex flex-col justify-center items-center p-4"
-          style={{ minWidth: 250, maxWidth: 600, margin: 'auto' }}
-        >
-          <TodoList user={supabase.auth.user()} />
-          <button
-            className="btn-green w-full mt-12"
-            onClick={async () => {
-              const { error } = await supabase.auth.signOut()
-              if (error) console.log('Error logging out:', error.message)
-            }}
-          >
-            Logout
-          </button>
-        </div>
-      )}
+    <div className="w-full h-full bg-dblue flex items-center">
+      <div className="relative mx-auto">
+          <p className="text-fgreen text-lg leading-none font-mono">✨ The most simple</p>
+          <h1 className="text-fgreen huge leading-none mb-4">Todo list</h1>
+          <Link href="/app">
+              <a className="btn-green h-10 w-full absolute">Go</a>
+          </Link>
+      </div>
     </div>
   )
 }

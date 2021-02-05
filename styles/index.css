@@ -69,6 +69,10 @@
     @apply transition duration-150 bg-fgreen text-dblue border-0;
 }
 
+.huge {
+    font-size: 8rem;
+}
+
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
