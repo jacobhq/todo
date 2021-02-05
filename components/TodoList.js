@@ -38,10 +38,14 @@ export default function Todos({ user }) {
 
   return (
     <div className="w-full">
-      <h1 className="mb-12">Todo List.</h1>
+      <div className="flex gap-2">
+
+
+<h1 className="mb-12 text-fgreen">Todo List.</h1>
+      </div>
       <div className="flex gap-2 my-2">
         <input
-          className="rounded w-full p-2"
+          className="rounded w-full p-2 bg-dblue text-fgreen border-fgreen border focus:outline-none"
           type="text"
           placeholder="make coffee"
           value={newTaskText}
@@ -50,12 +54,12 @@ export default function Todos({ user }) {
             setNewTaskText(e.target.value)
           }}
         />
-        <button className="btn-black" onClick={() => addTodo(newTaskText)}>
+        <button className="btn-green" onClick={() => addTodo(newTaskText)}>
           Add
         </button>
       </div>
       {!!errorText && <Alert text={errorText} />}
-      <div className="bg-white shadow overflow-hidden rounded-md">
+      <div className="bg-white overflow-hidden rounded-md">
         <ul>
           {todos.map((todo) => (
             <Todo key={todo.id} todo={todo} onDelete={() => deleteTodo(todo.id)} />
@@ -91,7 +95,7 @@ const Todo = ({ todo, onDelete }) => {
         e.preventDefault()
         toggle()
       }}
-      className="w-full block cursor-pointer focus:outline-none transition duration-150 ease-in-out"
+      className="w-full block cursor-pointer focus:outline-none transition duration-150 ease-in-out bg-dblue text-fgreen"
     >
       <div className="flex items-center px-4 py-4 sm:px-6">
         <div className="min-w-0 flex-1 flex items-center">
@@ -112,15 +116,10 @@ const Todo = ({ todo, onDelete }) => {
             e.stopPropagation()
             onDelete()
           }}
-          className="w-4 h-4 ml-2 border-2 hover:border-gray-500 rounded"
+          className="w-4 h-4 ml-2 border-0 rounded text-fgreen"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="gray">
-            <path
-              fillRule="evenodd"
-              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+
         </button>
       </div>
     </li>

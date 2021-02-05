@@ -7,28 +7,36 @@
 /* Stop purging. */
 
 /* Write your own custom component styles here */
-.btn-black {
-  @apply border border-black bg-black text-white font-bold py-2 px-4 rounded text-center;
+.btn-green {
+  @apply border border-fgreen bg-dblue text-fgreen font-bold py-2 px-4 rounded text-center;
 }
-.btn-black:hover {
-  @apply transition duration-150 bg-white text-black;
+.btn-green:hover {
+  @apply transition duration-150 bg-fgreen text-dblue;
 }
-.btn-black-outline {
-  @apply border border-black text-black py-2 px-4 rounded font-bold text-center;
+.btn-green-outline {
+  @apply border border-fgreen text-dblue py-2 px-4 rounded font-bold text-center;
 }
-.btn-black-outline:hover {
-  @apply transition duration-150 bg-black text-white;
+.btn-green-outline:hover {
+  @apply transition duration-150 bg-fgreen text-dblue;
+}
+
+.sbui-checkbox:checked {
+    background-color: #20fc8f !important;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793C12.3945 4.98053 12.4998 5.23484 12.4998 5.5C12.4998 5.76516 12.3945 6.01947 12.207 6.207L7.20698 11.207C7.01945 11.3945 6.76514 11.4998 6.49998 11.4998C6.23482 11.4998 5.98051 11.3945 5.79298 11.207L3.79298 9.207C3.61082 9.0184 3.51003 8.7658 3.51231 8.5036C3.51458 8.2414 3.61975 7.99059 3.80516 7.80518C3.99057 7.61977 4.24138 7.5146 4.50358 7.51233C4.76578 7.51005 5.01838 7.61084 5.20698 7.793L6.49998 9.086L10.793 4.793C10.9805 4.60553 11.2348 4.50021 11.5 4.50021C11.7651 4.50021 12.0195 4.60553 12.207 4.793Z' fill='%230B3954'/%3E%3C/svg%3E%0A") !important;
+}
+
+.sbui-checkbox {
+    background-color: #0b3954 !important;
 }
 
 .complete {
     width: 1rem !important;
     height: 1rem !important;
     margin: 0 !important;
-    border: 2px solid #e2e8f0 !important;
 }
 
 .complete:hover:not(.complete:checked) {
-    border: 2px solid #a0aec0 !important;
+    border: 1px solid #20fc8f !important;
 }
 
 .complete:checked {

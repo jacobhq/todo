@@ -6,7 +6,7 @@ export default function IndexPage() {
   const { user } = Auth.useUser()
 
   return (
-    <div className="w-full h-full bg-gray-300">
+    <div className="w-full h-full bg-dblue">
       {!user ? (
         <div className="w-full h-full flex justify-center items-center p-4">
           <Auth
@@ -23,7 +23,7 @@ export default function IndexPage() {
         >
           <TodoList user={supabase.auth.user()} />
           <button
-            className="btn-black w-full mt-12"
+            className="btn-green w-full mt-12"
             onClick={async () => {
               const { error } = await supabase.auth.signOut()
               if (error) console.log('Error logging out:', error.message)
