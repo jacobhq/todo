@@ -14,7 +14,7 @@
   @apply transition duration-150 bg-fgreen text-dblue;
 }
 .btn-green-outline {
-  @apply border border-fgreen text-dblue py-2 px-4 rounded font-bold text-center;
+  @apply border-0 text-dblue bg-fgreen py-2 px-4 rounded font-bold text-center;
 }
 .btn-green-outline:hover {
   @apply transition duration-150 bg-fgreen text-dblue;
